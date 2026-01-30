@@ -1,0 +1,27 @@
+{
+  "name": "live-debate-frontend",
+  "version": "1.0.0",
+  "description": "直播辩论小程序/H5 前端",
+  "scripts": {
+    "dev:h5": "cross-env UNI_PLATFORM=h5 vue-cli-service uni-build --mode development",
+    "build:h5": "cross-env UNI_PLATFORM=h5 vue-cli-service uni-build --mode production",
+    "dev:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin vue-cli-service uni-build --mode development",
+    "build:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin vue-cli-service uni-build --mode production"
+  },
+  "dependencies": {
+    "@dcloudio/uni-ui": "^1.5.11",
+    "@lottiefiles/dotlottie-vue": "^0.10.5",
+    "lottie-miniprogram": "^1.0.12",
+    "lottie-web": "^5.13.0",
+    "vant-weapp": "^0.5.29"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-app-plus": "^2.0.2-4070620250821001",
+    "@dcloudio/uni-cli-shared": "^2.0.2-4070620250821001",
+    "@vue/cli-service": "^5.0.9",
+    "cross-env": "^10.1.0"
+  },
+  "keywords": ["debate", "live", "miniprogram", "vue", "uni-app"],
+  "author": "",
+  "license": "MIT"
+}

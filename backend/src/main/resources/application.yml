@@ -1,0 +1,11 @@
+server:
+  port: 8000
+  address: 0.0.0.0  # 监听所有网卡，便于同机网关代理与局域网直连
+spring:
+  application:
+    name: live-backend
+# 允许跨域与 WebSocket（与前端 8081 等配合）
+logging:
+  level:
+    com.live: INFO
+    org.springframework.web: INFO

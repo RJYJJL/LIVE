@@ -1,0 +1,122 @@
+{
+  "stream-1769606900000-7ftx9u3jd": {
+    "segments": [
+      {
+        "name": "正方发言",
+        "duration": 120,
+        "side": "left"
+      },
+      {
+        "name": "反方发言",
+        "duration": 120,
+        "side": "right"
+      },
+      {
+        "name": "自由辩论",
+        "duration": 180,
+        "side": "both"
+      },
+      {
+        "name": "正方总结",
+        "duration": 60,
+        "side": "left"
+      },
+      {
+        "name": "反方总结",
+        "duration": 60,
+        "side": "right"
+      }
+    ],
+    "updatedAt": "2026-01-28T23:42:46.805Z"
+  },
+  "stream-1769605479689-ki0447aot": {
+    "segments": [
+      {
+        "name": "正方发言",
+        "duration": 180,
+        "side": "left"
+      },
+      {
+        "name": "反方质问",
+        "duration": 120,
+        "side": "right"
+      },
+      {
+        "name": "反方发言",
+        "duration": 180,
+        "side": "right"
+      },
+      {
+        "name": "正方质问",
+        "duration": 120,
+        "side": "left"
+      },
+      {
+        "name": "自由辩论",
+        "duration": 300,
+        "side": "both"
+      },
+      {
+        "name": "正方总结",
+        "duration": 120,
+        "side": "left"
+      },
+      {
+        "name": "反方总结",
+        "duration": 100,
+        "side": "right"
+      }
+    ],
+    "updatedAt": "2026-01-29T00:44:08.266Z"
+  },
+  "stream-1769653816593-e3i47zwbb": {
+    "segments": [
+      {
+        "name": "环节 1",
+        "duration": 180,
+        "side": "both"
+      }
+    ],
+    "updatedAt": "2026-01-29T05:00:09.874Z"
+  },
+  "stream-1769654107440-dl62z6qv3": {
+    "segments": [
+      {
+        "name": "正方发言",
+        "duration": 120,
+        "side": "left"
+      },
+      {
+        "name": "反方发言",
+        "duration": 120,
+        "side": "right"
+      },
+      {
+        "name": "自由辩论",
+        "duration": 180,
+        "side": "both"
+      },
+      {
+        "name": "正方总结",
+        "duration": 60,
+        "side": "left"
+      },
+      {
+        "name": "反方总结",
+        "duration": 60,
+        "side": "right"
+      }
+    ],
+    "updatedAt": "2026-01-29T05:52:15.890Z"
+  },
+  "stream-1769653963190-r9y9102it": {
+    "segments": [
+      {
+        "name": "环节 1",
+        "duration": 180,
+        "side": "both"
+      }
+    ],
+    "updatedAt": "2026-01-30T09:23:19.683Z"
+  }
+}

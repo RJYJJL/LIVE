@@ -1,0 +1,52 @@
+[
+  {
+    "id": "stream-1769605479689-ki0447aot",
+    "name": "年少轻狂还是年少有为",
+    "url": "https://touch.com/live/stream.m3u8",
+    "type": "hls",
+    "description": "a",
+    "enabled": false,
+    "createdAt": "2026-01-28T13:04:39.689Z",
+    "updatedAt": "2026-01-30T07:16:41.428Z"
+  },
+  {
+    "id": "stream-1769606900000-7ftx9u3jd",
+    "name": "橘猫好还是狸猫好",
+    "url": "https://cat.com/live/stream.m3u8",
+    "type": "hls",
+    "description": "",
+    "enabled": false,
+    "createdAt": "2026-01-28T13:28:20.000Z",
+    "updatedAt": "2026-01-30T08:24:58.851Z"
+  },
+  {
+    "id": "stream-1769653816593-e3i47zwbb",
+    "name": "不痛苦按钮",
+    "url": "https://button.com/live/stream.m3u8",
+    "type": "hls",
+    "description": "",
+    "enabled": false,
+    "createdAt": "2026-01-29T02:30:16.595Z",
+    "updatedAt": "2026-01-30T08:25:01.142Z"
+  },
+  {
+    "id": "stream-1769653963190-r9y9102it",
+    "name": "人性",
+    "url": "https://people.com/live/stream.m3u8",
+    "type": "hls",
+    "description": "",
+    "enabled": true,
+    "createdAt": "2026-01-29T02:32:43.190Z",
+    "updatedAt": "2026-01-30T08:26:15.529Z"
+  },
+  {
+    "id": "stream-1769654107440-dl62z6qv3",
+    "name": "年轻人搞钱还是追梦",
+    "url": "https://young.com/live/stream.m3u8",
+    "type": "hls",
+    "description": "",
+    "enabled": false,
+    "createdAt": "2026-01-29T02:35:07.441Z",
+    "updatedAt": "2026-01-30T08:25:03.951Z"
+  }
+]

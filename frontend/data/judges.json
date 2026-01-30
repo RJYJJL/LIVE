@@ -1,0 +1,92 @@
+{
+  "stream-1769653816593-e3i47zwbb": {
+    "judges": [
+      {
+        "id": "judge-1",
+        "name": "评委1",
+        "role": "主评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      },
+      {
+        "id": "judge-2",
+        "name": "观众1",
+        "role": "嘉宾评委",
+        "avatar": "/static/iconfont/wode.png",
+        "votes": 10,
+        "userId": "owaF-13Ueukqwd_EFJqS-jDTI9-U"
+      },
+      {
+        "id": "judge-3",
+        "name": "评委3",
+        "role": "嘉宾评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      }
+    ],
+    "replacedUserIds": [],
+    "updatedAt": "2026-01-29T05:23:23.117Z"
+  },
+  "stream-1769606900000-7ftx9u3jd": {
+    "judges": [
+      {
+        "id": "judge-1",
+        "name": "评委1",
+        "role": "主评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      },
+      {
+        "id": "judge-2",
+        "name": "评委2",
+        "role": "嘉宾评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      },
+      {
+        "id": "judge-3",
+        "name": "评委3",
+        "role": "嘉宾评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      }
+    ],
+    "replacedUserIds": [],
+    "updatedAt": "2026-01-29T19:25:06.733Z"
+  },
+  "stream-1769653963190-r9y9102it": {
+    "judges": [
+      {
+        "id": "judge-1",
+        "name": "评委1",
+        "role": "主评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      },
+      {
+        "id": "judge-2",
+        "name": "评委2",
+        "role": "嘉宾评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      },
+      {
+        "id": "judge-3",
+        "name": "评委3",
+        "role": "嘉宾评委",
+        "avatar": "/admin/assets/images/judges/osmanthus.jpg",
+        "votes": 10,
+        "userId": null
+      }
+    ],
+    "replacedUserIds": [],
+    "updatedAt": "2026-01-30T09:23:34.215Z"
+  }
+}

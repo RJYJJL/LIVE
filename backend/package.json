@@ -1,0 +1,32 @@
+{
+  "name": "live-debate-backend",
+  "version": "1.0.0",
+  "description": "直播辩论 Node 后端（API、管理后台、数据）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "install-and-start": "npm install && node server.js",
+    "start:dev": "cross-env PORT=8080 node server.js",
+    "dev": "nodemon server.js",
+    "swagger": "node swagger-server.js",
+    "swagger:dev": "nodemon swagger-server.js"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^12.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^8.3.2",
+    "ws": "^8.18.3",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["debate", "live", "server"],
+  "author": "",
+  "license": "MIT"
+}

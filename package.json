@@ -1,0 +1,16 @@
+{
+  "name": "live-debate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "直播辩论系统（前端 + 网关 + 后端）",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "start:backend": "cd backend && npm start",
+    "start:gateway": "cd gateway && npm start",
+    "dev:frontend": "cd frontend && npm run dev:h5",
+    "build:frontend": "cd frontend && npm run build:h5"
+  },
+  "keywords": ["debate", "live"],
+  "author": "",
+  "license": "MIT"
+}

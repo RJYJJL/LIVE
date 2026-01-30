@@ -1,0 +1,136 @@
+{
+  "totalVotes": 3245,
+  "totalUsers": 0,
+  "dailyStats": [
+    {
+      "date": "2026-01-29",
+      "totalVotes": 92,
+      "leftVotes": 42,
+      "rightVotes": 50,
+      "activeUsers": 38,
+      "streamVotesBar": [
+        {
+          "id": "stream-1769605479689-ki0447aot",
+          "name": "年少轻狂还是年少有为",
+          "leftVotes": 32,
+          "rightVotes": 44
+        },
+        {
+          "id": "stream-1769606900000-7ftx9u3jd",
+          "name": "橘猫好还是狸猫好",
+          "leftVotes": 6,
+          "rightVotes": 4
+        },
+        {
+          "id": "stream-1769653816593-e3i47zwbb",
+          "name": "不痛苦按钮",
+          "leftVotes": 2,
+          "rightVotes": 2
+        },
+        {
+          "id": "stream-1769653963190-r9y9102it",
+          "name": "人性",
+          "leftVotes": 0,
+          "rightVotes": 0
+        },
+        {
+          "id": "stream-1769654107440-dl62z6qv3",
+          "name": "年轻人搞钱还是追梦",
+          "leftVotes": 2,
+          "rightVotes": 0
+        }
+      ],
+      "hourlyActivity": [
+        0,
+        0,
+        0,
+        41,
+        37,
+        32,
+        59,
+        155,
+        117,
+        52,
+        57,
+        92,
+        54,
+        43,
+        54,
+        19,
+        79,
+        406,
+        86,
+        112,
+        80,
+        154,
+        0,
+        0
+      ]
+    },
+    {
+      "date": "2026-01-30",
+      "totalVotes": 1170,
+      "leftVotes": 566,
+      "rightVotes": 604,
+      "activeUsers": 38,
+      "streamVotesBar": [
+        {
+          "id": "stream-1769606900000-7ftx9u3jd",
+          "name": "橘猫好还是狸猫好",
+          "leftVotes": 180,
+          "rightVotes": 164
+        },
+        {
+          "id": "stream-1769653816593-e3i47zwbb",
+          "name": "不痛苦按钮",
+          "leftVotes": 26,
+          "rightVotes": 138
+        },
+        {
+          "id": "stream-1769654107440-dl62z6qv3",
+          "name": "年轻人搞钱还是追梦",
+          "leftVotes": 226,
+          "rightVotes": 238
+        },
+        {
+          "id": "stream-1769605479689-ki0447aot",
+          "name": "年少轻狂还是年少有为",
+          "leftVotes": 90,
+          "rightVotes": 40
+        },
+        {
+          "id": "stream-1769653963190-r9y9102it",
+          "name": "人性",
+          "leftVotes": 44,
+          "rightVotes": 24
+        }
+      ],
+      "hourlyActivity": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26,
+        90,
+        34,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}
