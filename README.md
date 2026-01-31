@@ -3,26 +3,28 @@
 ## 📌 基本信息
 
 - **项目名称**：直播辩论系统（live-debate）
-- **说明**：直播辩论小程序/后台，多直播流管理、投票、评委、辩题、数据统计，支持 H5 与微信小程序。后端 Spring Boot 提供 API 与 WebSocket，Node 中间层提供后台页面与静态资源并代理 `/api` 到后端。
+- **说明**：直播辩论小程序/后台，多直播流管理、投票、评委、辩题、数据统计，支持 H5 。后端 Spring Boot 提供 API 与 WebSocket，Node 中间层提供后台页面与静态资源并代理 `/api` 到后端。
 
 ---
 
-## 🚀 演示地址（Render 部署）
+## 🚀 演示地址（阿里云部署）
 
-- **前端 / 后台**：`https://live-debate.onrender.com/admin`（本地：`http://localhost:8080/admin`）  
-  _部署后请将 `live-debate` 替换为你在 Render 创建的前端/网关服务名称。_
-- **后端 API**：与前端同域时为 `https://live-debate.onrender.com/api`；若后端单独部署则为 `https://live-debate-api.onrender.com/api`（本地：`http://localhost:8000/api`）  
-  _后端单独部署时，请将 `live-debate-api` 替换为你的 Spring Boot 服务名称。_
+- **前端 / 后台**：`http://114.55.106.248:8080/admin`（本地：`http://localhost:8080/admin`）
+- **后端 API**：与前端同域时为 `http://114.55.106.248:8080/api`(因为设置问题，只有一行返回值）
 
 ---
 
 ## 🧱 技术栈说明
 
-- **后端框架**：Java + Spring Boot（端口 8000），提供 REST API 与 WebSocket；与 Node 中间层配合，由网关（8080）代理 `/api` 到后端。
-- **Mock 数据生成方案**：**代码模拟**。后端使用 `MockDataService`（内存状态：直播流、投票、用户、辩题、AI 内容、辩论流程等），无 Faker.js，无独立 JSON 文件；Node 层可选本地 JSON（`frontend/data/*.json`）+ `admin/db.js` 做后台管理数据。
-- **部署平台与方式**：Render（Web Service）部署 Node 网关或 Spring Boot 后端；自建服务器可用 PM2 跑 Node、`java -jar` 跑 Spring Boot。
+### 后端框架
+
+- **Node.js + Express**：主网关服务，提供 API 路由、静态资源、WebSocket 实时通信
+- **Spring Boot (Java)**：可选后端，提供 Mock 数据服务（端口 8000），可通过网关代理接入
 
 ---
+- **平台**：阿里云 ECS
+- **启动方式**：`node serve.js` + `java -jar target/live-backend-1.0.0.jar`
+- **端口**：8080（可通过环境变量 `PORT` 配置）
 
 ## 🔗 项目结构与接口说明
 
@@ -44,7 +46,6 @@ backend/
 
 ### 主要接口（后端 Spring Boot）
 
-返回格式统一为：`{ "code": 0, "message": "success", "data": {...}, "success": true }`（失败时 `success: false`，`code` 非 0）。
 
 | 功能 | 方法 | 路径 | 描述 |
 |------|------|------|------|
@@ -83,21 +84,23 @@ backend/
 
 ### 遇到的问题与解决方案
 
-- **端口占用**：多次启动导致 8080 被占，使用 `PORT=8081` 或先结束占用进程（`netstat -ano | findstr :8080` → `taskkill /PID xxx /F`）。
+- **端口占用**：多次启动导致 8080 被占，使用 `PORT=8081` 或强制结束占用进程（`netstat -ano | findstr :8080` → `taskkill /PID xxx /F`）。
 - **网关与后端联调**：必须先启动 Spring Boot（8000），再启动 Node（8080），否则访问 `/api` 会代理失败；环境变量 `BACKEND_URL` 可指向后端地址。
-- **数据统计**：未选日期时按“当天”统计；区间查询时“活跃用户”取区间内单日最大值；投票分布按当日正反方票数计算，保证正方%+反方%=100%。
+- 
 
 ### 本地联调经验
 
-- **顺序**：先 `cd backend && mvn spring-boot:run`（端口 8000），再 `cd frontend && npm install && npm start`（端口 8080）。
+- **本地启动顺序**：先 `cd backend && mvn spring-boot:run`（端口 8000），再 `cd frontend && npm install && npm start`（端口 8080）。
 - **访问**：浏览器打开 `http://localhost:8080/admin`；所有 `/api` 请求由 Node 代理到 `http://127.0.0.1:8000`。
 - 小程序/H5 开发时将 API 基地址设为 `http://本机IP:8080`，保证手机与电脑同网段可访问。
 
 ### 部署步骤与踩坑记录
 
-- **Render 部署 Node 网关**：连 GitHub 仓库，Root 留空；Build：`cd frontend && npm install`；Start：`npm start`（frontend 的 package.json 中需有 `"start": "node server.js"`）。Render 自动注入 `PORT`。
-- **Render 部署 Spring Boot**：可单独建 Web Service，Root 填 `backend`；Build：`mvn clean package -DskipTests`；Start：`java -jar target/live-backend-1.0.0.jar`（以实际 jar 名为准）。网关侧设置环境变量 `BACKEND_URL` 为 Spring Boot 公网地址。
-- **踩坑**：网关与后端分开部署时必须在网关侧配置 `BACKEND_URL`；端口占用时改用 `PORT=8081` 或先结束占用进程。
+- **上传代码：打包压缩并上传到服务器。
+- **安装依赖：npm install 。
+- **启动服务：`node serve.js` + `java -jar target/live-backend-1.0.0.jar`
+- **防火墙：确保阿里云安全组开放 8080 端口。
+- **踩坑：设置完项目后台运行后直接退出，导致打开网页时显示访问失败，因为配置问题在本地启动的方式和阿里云有出入
 
 ---
 
@@ -106,4 +109,4 @@ backend/
 - **主语言**：Java、H5 + CSS3 + JavaScript、Python  
 - **常用技术栈**：Spring Boot、Node.js、Vue / Django、前后端联调与简单部署  
 - **擅长方向**：制作网页，完善功能
-- **学习目标**：完善全栈开发能力，熟悉更多框架技术栈
+- **学习目标**：完善全栈开发能力，熟悉更框架Django等框架
